@@ -1,0 +1,11 @@
+<div>
+  <div>Anzahl Straßen in Nürnberg: {{anzahl}}</div>
+  <table>
+    <tbody>
+    <tr *ngFor="let street of streets">
+      <td>{{street.id}}</td>
+      <td>{{street.name}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
