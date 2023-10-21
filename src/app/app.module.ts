@@ -6,11 +6,13 @@ import { StreetsComponent } from './streets/streets.component';
 import {HttpClientModule} from "@angular/common/http";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from "@angular/forms";
+import { StreetComponent } from './street/street.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StreetsComponent
+    StreetsComponent,
+    StreetComponent
   ],
   imports: [
     BrowserModule,

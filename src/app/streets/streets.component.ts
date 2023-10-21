@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Street, StreetService} from "../services/street.service";
 import {debounceTime, distinctUntilChanged, map, Observable, OperatorFunction} from "rxjs";
+import {NgbTypeaheadSelectItemEvent} from "@ng-bootstrap/ng-bootstrap";
 
 
 
@@ -23,6 +24,9 @@ export class StreetsComponent implements OnInit{
 
   allStreets: Street[] = [];
   anzahl = 0;
+
+  selectedStreet: Street;
+
   constructor(private streetService: StreetService) {
   }
 
@@ -49,4 +53,7 @@ export class StreetsComponent implements OnInit{
   }
   formatStreetName = (street: Street): string => street.name;
 
+  selectStreet(event: NgbTypeaheadSelectItemEvent<any>) {
+    this.selectedStreet = event.item;
+  }
 }

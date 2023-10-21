@@ -5,6 +5,8 @@
   <div class="input-group mb-2">
     <span class="input-group-text">Straße</span>
     <input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="streetSearchStr"
-           [ngbTypeahead]="search" [resultFormatter]="formatStreetName" [inputFormatter]="formatStreetName"/>
+           [ngbTypeahead]="search" [resultFormatter]="formatStreetName" [inputFormatter]="formatStreetName"
+            (selectItem)="selectStreet($event)"/>
   </div>
 </div>
+<app-street [street]="selectedStreet"></app-street>
