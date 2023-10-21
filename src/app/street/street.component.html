@@ -6,9 +6,8 @@
     <a class="btn btn-primary" (click)="loadFraktions()">Müll Fraktionen</a>
   </div>
 </div>
-<div class="card" style="width: 18rem;" [style.background-color]="fraktion.farbeRgb" *ngFor="let fraktion of fraktions">
+<div class="card fraktion-card" style="width: 18rem;"  *ngFor="let fraktion of fraktions">
   <div class="card-body">
-    <h5 class="card-title">{{fraktion.name}}</h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary" >{{fraktion.farbeRgb}}</h6>
+    <h5 class="card-title"><i class="bi bi-trash-fill me-2" [style.color]="fraktion.farbeRgb"></i>{{fraktion.name}}</h5>
   </div>
 </div>
