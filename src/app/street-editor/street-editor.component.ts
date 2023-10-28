@@ -12,4 +12,13 @@ export class StreetEditorComponent {
   @Input() fraktion: Fraktion;
 
   constructor(public activeModal: NgbActiveModal) {}
+
+  close() {
+    this.activeModal.close('Close click')
+  }
+
+  save() {
+    console.info("Save our changes");
+    this.close();
+  }
 }
