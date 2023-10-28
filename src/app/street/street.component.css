@@ -1,3 +1,7 @@
 .fraktion-card {
   background-color: lightgrey;
 }
+
+.edit-icon {
+  cursor: pointer;
+}
